@@ -8,6 +8,11 @@ import { join, relative, posix } from "node:path";
 const SITE = "_site";
 const listExternal = process.argv.includes("--list-external");
 
+// When the site is built with a path prefix (GitHub Pages project site),
+// internal URLs start with the prefix but files in _site/ do not.
+const rawPrefix = process.env.PATH_PREFIX || "/";
+const PREFIX = rawPrefix === "/" ? "" : rawPrefix.replace(/\/+$/, ""); // "/privacy-cookbook"
+
 if (!existsSync(SITE)) {
   console.error(`No ${SITE}/ directory. Run "npm run build" first.`);
   process.exit(1);
@@ -83,7 +88,19 @@ for (const file of walk(SITE)) {
       continue;
     }
 
-    const target = targetFile(path);
+    let sitePath = path;
+    if (PREFIX) {
+      if (sitePath === PREFIX || sitePath === `${PREFIX}/`) {
+        sitePath = "/";
+      } else if (sitePath.startsWith(`${PREFIX}/`)) {
+        sitePath = sitePath.slice(PREFIX.length);
+      } else {
+        errors.push(`${rel}: link missing path prefix "${url}"`);
+        continue;
+      }
+    }
+
+    const target = targetFile(sitePath);
     if (!existsSync(target)) {
       errors.push(`${rel}: broken link "${url}"`);
       continue;
