@@ -73,6 +73,11 @@ jobs:
     steps:
       - name: Configure Pages
         uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
+        with:
+          # Auto-enable Pages on first deploy (no-op once enabled). Deploys
+          # fail while the repository is private on a free plan; they start
+          # working the moment the repo is public.
+          enablement: true
 
       - name: Deploy to GitHub Pages
         id: deployment

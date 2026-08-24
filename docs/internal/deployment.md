@@ -28,14 +28,18 @@ only things to change. For a custom domain at the root, set
 
 ## One-time repository setup
 
-1. Settings → Pages → **Source: GitHub Actions**.
-2. Settings → Pages → **Enforce HTTPS** (on by default for github.io).
-3. Recommended: branch protection on `main` requiring the CI check and one
-   review.
+The workflow passes `enablement: true` to `configure-pages`, so Pages is
+enabled automatically on the first successful deploy — no manual setup
+step. Still worth confirming once in Settings → Pages: source shows
+"GitHub Actions" and **Enforce HTTPS** is on (default for github.io).
+Recommended: branch protection on `main` requiring the CI check and one
+review.
 
-Note: on **private** repositories, GitHub Pages requires a paid plan; on
-public repositories it's free. Flipping the repo public is the expected
-path to going live.
+Note: on **private** repositories, GitHub Pages requires a paid plan, so
+the deploy job fails (the test job still runs and gates PRs). On public
+repositories Pages is free — flipping the repo public
+(`gh repo edit --visibility public`) is the expected path to going live;
+the next push to main deploys.
 
 ## Rollback
 
