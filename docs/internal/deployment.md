@@ -28,12 +28,12 @@ only things to change. For a custom domain at the root, set
 
 ## One-time repository setup
 
-The workflow passes `enablement: true` to `configure-pages`, so Pages is
-enabled automatically on the first successful deploy — no manual setup
-step. Still worth confirming once in Settings → Pages: source shows
-"GitHub Actions" and **Enforce HTTPS** is on (default for github.io).
-Recommended: branch protection on `main` requiring the CI check and one
-review.
+1. Settings → Pages → **Source: GitHub Actions** (one time; the workflow
+   deliberately doesn't self-enable Pages because that would require the
+   broad `administration: write` permission).
+2. Confirm **Enforce HTTPS** is on (default for github.io).
+3. Recommended: branch protection on `main` requiring the CI check and one
+   review.
 
 Note: on **private** repositories, GitHub Pages requires a paid plan, so
 the deploy job fails (the test job still runs and gates PRs). On public

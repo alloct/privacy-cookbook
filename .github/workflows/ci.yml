@@ -71,13 +71,13 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      # Pages must be enabled once in Settings -> Pages -> Source: GitHub
+      # Actions. (configure-pages could auto-enable it, but that requires
+      # administration:write — not worth granting for a one-time setting.)
+      # While the repository is private on a free plan, this job fails and
+      # the test job above still gates PRs; it works as soon as Pages exists.
       - name: Configure Pages
         uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
-        with:
-          # Auto-enable Pages on first deploy (no-op once enabled). Deploys
-          # fail while the repository is private on a free plan; they start
-          # working the moment the repo is public.
-          enablement: true
 
       - name: Deploy to GitHub Pages
         id: deployment
