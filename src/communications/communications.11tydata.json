@@ -1,0 +1,5 @@
+{
+    "section":  "Communications",
+    "layout":  "layouts/article.njk",
+    "sectionUrl":  "/communications/"
+}

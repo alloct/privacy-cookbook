@@ -1,0 +1,5 @@
+{
+    "section":  "Recommendations",
+    "layout":  "layouts/article.njk",
+    "sectionUrl":  "/recommendations/"
+}

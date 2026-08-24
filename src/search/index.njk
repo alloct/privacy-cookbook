@@ -1,0 +1,29 @@
+---
+layout: layouts/base.njk
+title: Search
+description: Search The Privacy Cookbook. The index is built at compile time and searched entirely in your browser — no queries leave your device.
+eleventyExcludeFromCollections: true
+---
+<article class="article search-page">
+  <header class="article__header">
+    <h1>Search</h1>
+    <p class="article__lede">
+      The search index is generated when the site is built and downloaded to
+      your browser in small chunks. Queries never leave your device.
+    </p>
+  </header>
+
+  <noscript>
+    <div class="callout callout--note">
+      <p class="callout__label">JavaScript required</p>
+      <p>Search runs locally in your browser and needs JavaScript. With scripts
+      disabled, use the section list in the navigation below, or your browser's
+      find-in-page on a <a href="/sitemap.xml">sitemap</a> page.</p>
+    </div>
+  </noscript>
+
+  <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  <script src="/pagefind/pagefind-ui.js"></script>
+  <div id="search"></div>
+  <script src="/assets/js/search-init.js"></script>
+</article>

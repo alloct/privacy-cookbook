@@ -1,0 +1,60 @@
+---
+layout: layouts/base.njk
+description: A practical field guide to digital privacy and operational security. Threat modeling, hardening guides, tool recommendations, and lessons from real OPSEC failures.
+eleventyExcludeFromCollections: true
+---
+<div class="home">
+  <div class="home__intro">
+    <div class="home__intro-text">
+      <h1>The Privacy Cookbook</h1>
+      <p class="home__tagline">{{ site.tagline }}</p>
+      <p>
+        Recipes, not sermons. Every guide here starts from a threat model,
+        explains the tradeoffs, and tells you what to actually do. Written and
+        reviewed in the open; no ads, no analytics, no affiliate links.
+      </p>
+      <div class="home__actions">
+        <a class="button button--primary" href="/start-here/">Start here</a>
+        <a class="button button--secondary" href="/recommendations/">Recommendations</a>
+      </div>
+    </div>
+    <img class="home__mark" src="/assets/img/pigeon.png" alt="The Privacy Cookbook mark: a pigeon with a surveillance camera for a head" width="130" height="140">
+  </div>
+
+  <h2>Browse the cookbook</h2>
+  <ul class="home__sections">
+    {% for section in nav %}
+    {% set sectionPage = collections.all | pageByUrl(section.url) %}
+    <li>
+      <a href="{{ section.url }}">
+        <span class="home__section-title">{{ section.title }}</span>
+        {% if sectionPage and sectionPage.data.description %}
+        <span class="home__section-desc">{{ sectionPage.data.description }}</span>
+        {% endif %}
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+
+  <h2>How to use this site</h2>
+  <p>
+    If you are new, read <a href="/start-here/threat-modeling/">Threat Modeling</a> first.
+    Privacy advice without a threat model is just a shopping list. Once you know
+    what you are protecting and from whom, the rest of the cookbook tells you
+    which measures are worth your time and which are not.
+  </p>
+  <p>
+    The <a href="/darwin-awards/">Darwin Awards</a> section documents real,
+    publicly reported operational security failures — not to celebrate arrests,
+    but because a mistake that unmasked someone with everything to lose is a
+    mistake worth understanding.
+  </p>
+
+  <h2>What this site is not</h2>
+  <p>
+    This is not a product catalog and not a promise of anonymity. No tool makes
+    you anonymous; some tools reduce specific exposures under specific
+    conditions, and every recommendation here says which. Where we are unsure,
+    we say so.
+  </p>
+</div>

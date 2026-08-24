@@ -1,0 +1,5 @@
+{
+    "section":  "Darwin Awards",
+    "layout":  "layouts/article.njk",
+    "sectionUrl":  "/darwin-awards/"
+}

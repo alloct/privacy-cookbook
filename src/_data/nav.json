@@ -1,0 +1,101 @@
+[
+  {
+    "title": "Start Here",
+    "url": "/start-here/",
+    "items": [
+      { "title": "What Is Privacy?", "url": "/start-here/what-is-privacy/" },
+      { "title": "Why Privacy Matters", "url": "/start-here/why-privacy-matters/" },
+      { "title": "Threat Modeling", "url": "/start-here/threat-modeling/" },
+      { "title": "Privacy Fundamentals", "url": "/start-here/privacy-fundamentals/" }
+    ]
+  },
+  {
+    "title": "Accounts",
+    "url": "/accounts/",
+    "items": [
+      { "title": "Passwords", "url": "/accounts/passwords/" },
+      { "title": "Password Managers", "url": "/accounts/password-managers/" },
+      { "title": "Multi-Factor Authentication", "url": "/accounts/multi-factor-authentication/" },
+      { "title": "Passkeys", "url": "/accounts/passkeys/" },
+      { "title": "Account Recovery", "url": "/accounts/account-recovery/" }
+    ]
+  },
+  {
+    "title": "Devices",
+    "url": "/devices/",
+    "items": [
+      { "title": "Desktop: Windows, macOS, Linux", "url": "/devices/desktop/" },
+      { "title": "Android", "url": "/devices/android/" },
+      { "title": "iPhone and iPad", "url": "/devices/iphone-and-ipad/" }
+    ]
+  },
+  {
+    "title": "Browsing",
+    "url": "/browsing/",
+    "items": [
+      { "title": "Choosing a Browser", "url": "/browsing/browsers/" },
+      { "title": "Browser Hardening", "url": "/browsing/browser-hardening/" },
+      { "title": "Fingerprinting", "url": "/browsing/fingerprinting/" },
+      { "title": "Search Engines", "url": "/browsing/search-engines/" }
+    ]
+  },
+  {
+    "title": "Communications",
+    "url": "/communications/",
+    "items": [
+      { "title": "Messaging", "url": "/communications/messaging/" },
+      { "title": "Email", "url": "/communications/email/" },
+      { "title": "Communication Metadata", "url": "/communications/metadata/" }
+    ]
+  },
+  {
+    "title": "Network Privacy",
+    "url": "/network/",
+    "items": [
+      { "title": "VPNs", "url": "/network/vpns/" },
+      { "title": "Tor", "url": "/network/tor/" },
+      { "title": "DNS", "url": "/network/dns/" },
+      { "title": "Public Wi-Fi", "url": "/network/public-wifi/" }
+    ]
+  },
+  {
+    "title": "Data",
+    "url": "/data/",
+    "items": [
+      { "title": "Encryption", "url": "/data/encryption/" },
+      { "title": "Backups", "url": "/data/backups/" },
+      { "title": "File Metadata", "url": "/data/file-metadata/" },
+      { "title": "Data Minimization", "url": "/data/data-minimization/" }
+    ]
+  },
+  {
+    "title": "OPSEC",
+    "url": "/opsec/",
+    "items": [
+      { "title": "OPSEC Fundamentals", "url": "/opsec/fundamentals/" },
+      { "title": "Identity Compartmentalization", "url": "/opsec/compartmentalization/" },
+      { "title": "Social Engineering", "url": "/opsec/social-engineering/" }
+    ]
+  },
+  {
+    "title": "Recommendations",
+    "url": "/recommendations/",
+    "items": [
+      { "title": "Password Managers", "url": "/recommendations/password-managers/" },
+      { "title": "Browsers", "url": "/recommendations/browsers/" },
+      { "title": "Messengers", "url": "/recommendations/messengers/" }
+    ]
+  },
+  {
+    "title": "Darwin Awards",
+    "url": "/darwin-awards/",
+    "items": [
+      { "title": "Silk Road: The Altoid Posts", "url": "/darwin-awards/ross-ulbricht/" },
+      { "title": "AlphaBay: The Welcome Email", "url": "/darwin-awards/alphabay-welcome-email/" },
+      { "title": "LulzSec: One Login Without Tor", "url": "/darwin-awards/sabu-lulzsec/" },
+      { "title": "The Harvard Bomb Threat", "url": "/darwin-awards/harvard-bomb-threat/" },
+      { "title": "w0rmer: GPS in a Photo", "url": "/darwin-awards/w0rmer-exif/" },
+      { "title": "Guccifer 2.0: The VPN That Wasn't On", "url": "/darwin-awards/guccifer-2/" }
+    ]
+  }
+]
