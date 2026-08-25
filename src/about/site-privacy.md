@@ -56,7 +56,12 @@ read this site through [Tor](/network/tor/). It works fine there.
 GitHub Pages does not allow sites to set custom HTTP response headers.
 Within that constraint:
 
-- **HTTPS/HSTS:** Pages serves over HTTPS with HSTS.
+- **HTTPS:** enforced. Plain HTTP requests are redirected to HTTPS with a
+  301. There is no `Strict-Transport-Security` header, because the host
+  sends one only on its own `github.io` domains and does not let a custom
+  domain set response headers. So the very first request of a session, if
+  you type the address without `https://`, can be made over HTTP before
+  the redirect. Every request after that is HTTPS.
 - **Content-Security-Policy:** set via a `<meta>` tag on every page
   (`default-src 'self'` and related directives), which enforces most of
   CSP but (as a documented limitation of meta-tag CSP) cannot enforce
