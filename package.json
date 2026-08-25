@@ -1,0 +1,26 @@
+{
+  "name": "privacy-cookbook",
+  "version": "0.1.0",
+  "private": true,
+  "description": "The Privacy Cookbook, a static privacy and OPSEC knowledge base.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "serve": "node scripts/serve.mjs",
+    "build": "eleventy && pagefind --site _site",
+    "validate": "node scripts/validate-content.mjs",
+    "check-links": "node scripts/check-links.mjs",
+    "find-stale": "node scripts/validate-content.mjs --stale",
+    "test": "npm run validate && npm run build && npm run check-links"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "js-yaml": "^5.4.0",
+    "markdown-it-anchor": "^9.2.0",
+    "markdown-it-container": "^4.0.0",
+    "markdown-it-footnote": "^4.0.0",
+    "pagefind": "^1.3.0"
+  }
+}

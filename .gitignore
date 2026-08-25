@@ -1,0 +1,31 @@
+# Build output
+_site/
+
+# Dependencies
+node_modules/
+
+# Maintainer-only documentation, kept local
+docs/internal/
+
+# Environment / secrets - never commit credentials
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+credentials*.json
+secrets*.json
+
+# Editor and OS noise
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Logs
+npm-debug.log*
+*.log

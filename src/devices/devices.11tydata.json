@@ -1,0 +1,5 @@
+{
+    "section":  "Devices",
+    "layout":  "layouts/article.njk",
+    "sectionUrl":  "/devices/"
+}

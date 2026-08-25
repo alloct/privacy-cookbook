@@ -1,0 +1,22 @@
+<nav id="site-nav" class="sidebar" aria-label="Site sections">
+  <ul class="sidebar__sections">
+    {% for section in nav %}
+    <li class="sidebar__section">
+      <details {% if page.url and page.url.startsWith(section.url) %}open{% endif %}>
+        <summary>{{ section.title }}</summary>
+        <ul class="sidebar__pages">
+          <li><a href="{{ section.url }}" {% if page.url == section.url %}aria-current="page"{% endif %}>Overview</a></li>
+          {% for item in section.items %}
+          <li><a href="{{ item.url }}" {% if page.url == item.url %}aria-current="page"{% endif %}>{{ item.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </details>
+    </li>
+    {% endfor %}
+  </ul>
+  <p class="sidebar__meta">
+    <a href="/about/">About</a> ·
+    <a href="/about/site-privacy/">Site privacy</a> ·
+    <a href="#top">Back to top</a>
+  </p>
+</nav>

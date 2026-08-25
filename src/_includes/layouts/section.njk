@@ -1,0 +1,31 @@
+---
+layout: layouts/base.njk
+---
+<article class="article" data-pagefind-body>
+  <header class="article__header">
+    <h1>{{ title }}</h1>
+    {% if description %}<p class="article__lede">{{ description }}</p>{% endif %}
+  </header>
+
+  <div class="article__body">
+    {{ content | safe }}
+  </div>
+
+  {% for s in nav %}
+    {% if s.url == page.url %}
+    <ul class="page-list" data-pagefind-ignore>
+      {% for item in s.items %}
+      {% set itemPage = collections.all | pageByUrl(item.url) %}
+      <li class="page-list__item">
+        <a href="{{ item.url }}">
+          <span class="page-list__title">{{ item.title }}</span>
+          {% if itemPage and itemPage.data.description %}
+          <span class="page-list__desc">{{ itemPage.data.description }}</span>
+          {% endif %}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  {% endfor %}
+</article>

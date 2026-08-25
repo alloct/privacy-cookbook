@@ -1,0 +1,51 @@
+---
+layout: layouts/base.njk
+---
+<article class="article" data-pagefind-body>
+  <header class="article__header">
+    {% if section %}
+    <p class="article__crumb" data-pagefind-ignore>
+      <a href="{{ sectionUrl }}">{{ section }}</a>
+    </p>
+    {% endif %}
+    <h1>{{ title }}</h1>
+    {% if description %}<p class="article__lede">{{ description }}</p>{% endif %}
+    <div class="article__meta" data-pagefind-ignore>
+      {% if status and status != "published" %}
+      <span class="status status--{{ status }}">{{ status | replace("-", " ") }}</span>
+      {% endif %}
+      {% if last_reviewed %}
+      <span class="article__reviewed">Last reviewed <time datetime="{{ last_reviewed | isoDate }}">{{ last_reviewed | humanDate }}</time></span>
+      {% endif %}
+      {% if tags %}
+      <span class="article__tags">
+        {% for tag in tags %}<span class="tag">{{ tag }}</span>{% endfor %}
+      </span>
+      {% endif %}
+    </div>
+  </header>
+
+  {% set headings = content | toc %}
+  {% if headings.length > 1 %}
+  <details class="toc" data-pagefind-ignore>
+    <summary>On this page</summary>
+    <ol>
+      {% for h in headings %}
+      <li><a href="#{{ h.id }}">{{ h.text }}</a></li>
+      {% endfor %}
+    </ol>
+  </details>
+  {% endif %}
+
+  <div class="article__body">
+    {{ content | safe }}
+  </div>
+
+  <footer class="article__footer" data-pagefind-ignore>
+    <p>
+      Found an error or something out of date?
+      <a href="{{ site.repo }}/edit/main/{{ page.inputPath | replace('./', '') }}">Suggest an edit</a>
+      or <a href="{{ site.repo }}/issues">open an issue</a>.
+    </p>
+  </footer>
+</article>
