@@ -21,6 +21,9 @@ Three ground rules for this section:
 
 - **Education, not glorification.** The subjects were caught doing harm.
   The interest here is the mistake, not the crime.
-- **Public record only.** Every claim traces to a cited source.
+- **Public record only.** Every claim traces to a cited source. Where a case
+  rests on something weaker than a court record, such as research published by
+  a security vendor about someone who has never been charged, the entry says so
+  at the top and we do not repeat names that the public record does not support.
 - **Defense only.** Entries explain what the mistake teaches defenders;
   they are not operational advice for evading law enforcement.

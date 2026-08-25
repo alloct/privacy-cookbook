@@ -95,7 +95,21 @@
       { "title": "LulzSec: One Login Without Tor", "url": "/darwin-awards/sabu-lulzsec/" },
       { "title": "The Harvard Bomb Threat", "url": "/darwin-awards/harvard-bomb-threat/" },
       { "title": "w0rmer: GPS in a Photo", "url": "/darwin-awards/w0rmer-exif/" },
-      { "title": "Guccifer 2.0: The VPN That Wasn't On", "url": "/darwin-awards/guccifer-2/" }
+      { "title": "Guccifer 2.0: The VPN That Wasn't On", "url": "/darwin-awards/guccifer-2/" },
+      { "title": "BreachForums: Grepping for His Own Name", "url": "/darwin-awards/pompompurin-breachforums/" },
+      { "title": "IntelBroker: One Payment in the Wrong Currency", "url": "/darwin-awards/intelbroker-bitcoin/" },
+      { "title": "Pryx: The Side Project That Matched the Persona", "url": "/darwin-awards/pryx-side-project/" }
+    ]
+  },
+  {
+    "title": "Flock Off",
+    "url": "/flock-off/",
+    "items": [
+      { "title": "Research Methods", "url": "/flock-off/methods/" },
+      { "title": "United States", "url": "/flock-off/united-states/" },
+      { "title": "Canada", "url": "/flock-off/canada/" },
+      { "title": "United Kingdom", "url": "/flock-off/united-kingdom/" },
+      { "title": "Everywhere Else", "url": "/flock-off/other-countries/" }
     ]
   }
 ]
